@@ -7,7 +7,7 @@ public class MainBellmanFord {
         g.ajouterArc("A", "B", 12);
         g.ajouterArc("A", "D", 87);
         g.ajouterArc("B", "E", 11);
-        g.ajouterArc("C", "A", 190);
+        g.ajouterArc("C", "A", 19);
         g.ajouterArc("D", "B", 23);
         g.ajouterArc("D", "C", 10);
         g.ajouterArc("E", "D", 43);
@@ -22,7 +22,7 @@ public class MainBellmanFord {
         System.out.print(valeurs);
 
         List<String> chemin = valeurs.calculerChemin(arrivee);
-        System.out.println("Plus court chemin de " + depart + " a " + arrivee + " : " + chemin);
+        System.out.println("Chemin de " + depart + " a " + arrivee + " : " + chemin);
         System.out.println("Cout total : " + valeurs.getValeur(arrivee));
     }
 }

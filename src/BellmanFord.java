@@ -1,7 +1,10 @@
-import java.util.List;
-
 public class BellmanFord {
-
+    /**
+     * calcule les plus courts chemins depuis le depart
+     * @param g le graphe
+     * @param depart le noeud de depart
+     * @return les valeur
+     */
     public Valeurs resoudre(Graphe g, String depart) {
         Valeurs valeurs = new Valeurs();
 
