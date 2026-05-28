@@ -1,10 +1,7 @@
+import java.io.File;
 import java.util.List;
 
 public class MainTransport {
-
-    private static final String FICHIER_NOEUDS = "C:/Users/kevin/Desktop/sae_algo/sae_02_ExploAlgo_PASHOkevin_HELOUANEkayis/src/stan.nodes.txt";
-    private static final String FICHIER_ARCS = "C:/Users/kevin/Desktop/sae_algo/sae_02_ExploAlgo_PASHOkevin_HELOUANEkayis/src/stan.edges.txt";
-
 
     public static void main(String[] args) {
         if (args.length != 2) {
@@ -12,11 +9,23 @@ public class MainTransport {
             System.exit(1);
         }
 
+        String dossier;
+        try {
+            File jar = new File(MainTransport.class.getProtectionDomain()
+                    .getCodeSource().getLocation().toURI());
+            dossier = jar.getParent();
+        } catch (Exception e) {
+            dossier = ".";
+        }
+
+        String fichierNoeuds = dossier + File.separator + "stan.nodes.txt";
+        String fichierArcs = dossier + File.separator + "stan.edges.txt";
+
         String regex = "\\[|\\]";
         String depart = args[0].split(regex)[1];
         String arrivee = args[1].split(regex)[1];
 
-        Graphe g = LireReseau.lire(FICHIER_NOEUDS, FICHIER_ARCS);
+        Graphe g = LireReseau.lire(fichierNoeuds, fichierArcs);
 
         Dijkstra dijkstra = new Dijkstra();
         Valeurs valeurs = dijkstra.resoudre(g, depart);
