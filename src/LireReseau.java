@@ -18,7 +18,7 @@ public class LireReseau {
                 g.ajouterNoeud(id);
             }
         } catch (IOException e) {
-            System.out.println("Erreur lecture des arrêts  " + e.getMessage());
+            System.out.println("erreur lecture des arrêts  " + e.getMessage());
         }
 
         try (BufferedReader br = new BufferedReader(new FileReader(fichier_connexions))) {
@@ -36,7 +36,7 @@ public class LireReseau {
                 g.ajouterArc(arrivee, depart, distance);
             }
         } catch (IOException e) {
-            System.out.println("Erreur lecture des connexions " + e.getMessage());
+            System.out.println("erreur lecture des connexions " + e.getMessage());
         }
 
         return g;

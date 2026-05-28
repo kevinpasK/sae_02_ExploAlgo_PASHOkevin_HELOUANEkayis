@@ -18,11 +18,11 @@ public class MainBellmanFord {
         BellmanFord bf = new BellmanFord();
         Valeurs valeurs = bf.resoudre(g, depart);
 
-        System.out.println("Valeurs depuis " + depart + " :");
+        System.out.println("Valeurs depuis " + depart);
         System.out.print(valeurs);
 
         List<String> chemin = valeurs.calculerChemin(arrivee);
-        System.out.println("Chemin de " + depart + " a " + arrivee + " : " + chemin);
-        System.out.println("Cout total : " + valeurs.getValeur(arrivee));
+        System.out.println("chemin de " + depart + " a " + arrivee + ", " + chemin);
+        System.out.println("cout total " + valeurs.getValeur(arrivee));
     }
 }

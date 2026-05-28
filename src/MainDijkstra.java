@@ -18,11 +18,11 @@ public class MainDijkstra {
         Dijkstra dijkstra = new Dijkstra();
         Valeurs valeurs = dijkstra.resoudre(g, depart);
 
-        System.out.println("Valeurs depuis " + depart + " :");
+        System.out.println("valeurs depuis " + depart);
         System.out.print(valeurs);
 
         List<String> chemin = valeurs.calculerChemin(arrivee);
-        System.out.println("Plus court chemin de " + depart + " a " + arrivee + " : " + chemin);
-        System.out.println("Cout total : " + valeurs.getValeur(arrivee));
+        System.out.println("plus court chemin de " + depart + " a " + arrivee + "," + chemin);
+        System.out.println("cout total " + valeurs.getValeur(arrivee));
     }
 }
