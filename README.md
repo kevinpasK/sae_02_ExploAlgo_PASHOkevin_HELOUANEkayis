@@ -31,6 +31,7 @@ reseau de bus STAN de l'agglomeration nanceenne
 
 Generer le fichier jar
 Depuis la racine du projet
+
     cd src
 
     javac -d out Arc.java Arcs.java Graphe.java GrapheListe.java Valeurs.java Principale.java BellmanFord.java MainBellmanFord.java Dijkstra.java MainDijkstra.java LireReseau.java MainTransport.java
